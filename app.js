@@ -27,9 +27,11 @@ bot.onText(/\/help/, function(msg, match) {
 })
 
 
+  bot.onText(/(.+)/, function(msg) {
 
-//the same as above + letters
-bot.onText(/[^\/help|\/start](.+)/, function(msg) {
+  if (msg.text.substring(0,1) == '/'){
+		return
+	}
 
 	var numberPattern = /\d+/gi
 	var letterPattern = /[А-ЯA-Z]/gi
