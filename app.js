@@ -15,7 +15,7 @@ bot.onText(/\/help/, function(msg, match) {
 	var str1 = "Список рассчитываемых бонусов:\n\n"
 	var str2 = "1. Бонус за сумму чисел \n"
 	var str3 = "2. Бонус за простое число (первая цифра номера +1)\n"
-	var str4 = "3. Бонус за число Фибоначчи (первая цифра номера +1)\n"
+	var str4 = "3. Бонус за число Фибоначчи = 4 балла)\n"
 	var str5 = "4. Бонус ЕН = 6 баллов\n"
 	var str6 = "5. Бонус за двойные буквы = 2 балла, за тройные = 4 балла\n\n"
 
@@ -83,8 +83,8 @@ bot.onText(/\/help/, function(msg, match) {
 
 	if (!!parseInt(digits)){
 		if (fibonacci.is(parseInt(digits))){
-			bonus += (parseInt(firstDigit)+1)
-			fibBonus = (parseInt(firstDigit)+1)
+			bonus += 4//(parseInt(firstDigit)+1)
+			fibBonus = 4//(parseInt(firstDigit)+1)
 		}
 		if (isPrime(parseInt(digits))) {
 			bonus += (parseInt(firstDigit)+1)
