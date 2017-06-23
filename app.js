@@ -86,10 +86,12 @@ bot.onText(/\/help/, function(msg, match) {
 			bonus += 4//(parseInt(firstDigit)+1)
 			fibBonus = 4//(parseInt(firstDigit)+1)
 		}
-		if (isPrime(parseInt(digits))) {
-			bonus += (parseInt(firstDigit)+1)
-			primeBonus = (parseInt(firstDigit)+1)
-		}
+		if (digits.replace(/^0+/,'') != 1){
+			if (isPrime(parseInt(digits))) {
+				bonus += (parseInt(firstDigit)+1)
+				primeBonus = (parseInt(firstDigit)+1)
+			}
+	  }
 
 		var sum = digits
 		while (sum.length > 1) {
