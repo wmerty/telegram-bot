@@ -17,7 +17,7 @@ bot.onText(/\/help/, function(msg, match) {
 	var str3 = "2. Бонус за простое число (первая цифра номера +1)\n"
 	var str4 = "3. Бонус за число Фибоначчи = 4 балла)\n"
 	var str5 = "4. Бонус ЕН = 6 баллов\n"
-	var str6 = "5. Бонус за двойные буквы = 2 балла, за тройные = 4 балла\n\n"
+	var str6 = "5. Бонус за двойные буквы = 3 балла, за тройные = 9 балла\n\n"
 
 	var str7 = "Вводить в бота сразу текст: русские, английские буквы, большие, маленькие, только буквы, только цифры, целиком номер.\n"
 	var str8 = "Учитываются только первые 3 буквы из номера и первые 3 цифры."
@@ -66,11 +66,11 @@ bot.onText(/\/help/, function(msg, match) {
 
 			if (!!result){
 				if (result.length > 2) {
-				bonus += 4
-				doubleLetters = 4
+				bonus += 9
+				doubleLetters = 9
 				} else if (result.length > 1){
-					bonus += 2
-					doubleLetters = 2
+					bonus += 3
+					doubleLetters = 3
 				}
 			}
 		}
